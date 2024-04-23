@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Illinois Tech InfoFinder</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.results {
+    margin-top: 30px;
+}
+
+.results h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.results ul {
+    padding: 0;
+}
+
+.results li {
+    margin-bottom: 15px;
+}
+
+.results a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.results a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Illinois Tech InfoFinder</h1>
+    </div>
+    <div class="results">
+      <h2>Search Results</h2>
+      <ul>
+        {% if result %}
+          {% for link in result %}
+            <li><a href="{{ link }}">{{ link }}</a></li>
+          {% endfor %}
+        {% else %}
+          <li>No results found</li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="footer">
+      Developed by <a href="https://www.linkedin.com/in/harish-hebsur/" title="Harish">Harish Hebsur</a>
+    </div>
+  </div>
+</body>
+</html>

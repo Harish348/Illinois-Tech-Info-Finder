@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Illinois Tech InfoFinder</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 36px;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    font-size: 18px;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+</style>
+</head>
+
+<body>
+  <div class="container">  
+    <form id="contact" action="/searchengine" method="POST">
+      <h1>Illinois Tech InfoFinder</h1>
+      <fieldset>
+        <input placeholder="Enter your query" name="Name" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" value="submit" id="contact-submit">Search</button>
+      </fieldset>
+      <p class="copyright">Developed by <a href="https://www.linkedin.com/in/harish-hebsur/" title="Harish">Harish Hebsur</a></p>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+scikit-learn
+scrapy
+beautifulsoup4
+flask
+bs4
+nltk
+numpy
+uuid
+pathlib
+
+
+
+
+
+

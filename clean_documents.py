@@ -1,0 +1,25 @@
+"""
+Created on Fri Apr 19 22:45:52 2024
+
+@author: harish
+"""
+
+import os
+
+DATA_DIR = "./documents/"
+
+
+def remove_extra_lines_and_tabs():
+	"""
+	Funtion to remove extra lines and tabs from documents.
+	"""
+
+	for filename in os.listdir(DATA_DIR):
+
+		clean_lines = []
+		with open(os.path.join(DATA_DIR, filename), "r") as f:
+		    lines = f.readlines()
+		    clean_lines = [l.strip() for l in lines if l.strip()]
+
+		with open(os.path.join(DATA_DIR, filename), "w") as f:
+		    f.writelines('\n'.join(clean_lines))
